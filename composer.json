@@ -1,0 +1,25 @@
+{
+    "name": "digitickets/omnipay.paymentsense",
+    "type": "library",
+    "description": "Custom OmniPay driver for PaymentSense",
+    "keywords": ["omnipay", "paymentsense"],
+    "homepage": "https://gitlab.totallydev.com/digitickets/omnipay.paymentsense",
+    "autoload": {
+        "psr-4": { "Omnipay\\PaymentSense\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~2.0",
+        "league/iso3166": "^2.1",
+        "guzzlehttp/psr7": "1.5.2"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0",
+        "squizlabs/php_codesniffer": "~1.5"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x.x-dev"
+        }
+    },
+    "prefer-stable": true
+}

@@ -17,7 +17,7 @@ class CompleteRedirectPurchaseResponseSuccessTest extends TestCase
     /**
      * Setup
      */
-    protected function setUp(): void
+    protected function setUp()
     {
         $client = $this->getHttpClient();
         $request = $this->getHttpRequest();
@@ -25,7 +25,7 @@ class CompleteRedirectPurchaseResponseSuccessTest extends TestCase
             $client,
             $request
         );
-        
+
         $purchaseRequest->setMerchantId('Totall-2560328');
         $purchaseRequest->setPassword('2OL9csT2THW3k5k');
         $purchaseRequest->setPreSharedKey('HlE6DLYJq4DoBjzLaM1y1LXyT2ob1nS2LRt12fS7ZA==');

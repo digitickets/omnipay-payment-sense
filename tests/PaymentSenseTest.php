@@ -27,7 +27,7 @@ class PaymentSenseTest extends GatewayTestCase
     /**
      * Setup
      */
-    protected function setUp(): void
+    protected function setUp()
     {
         parent::setUp();
         $this->gateway = new Gateway(
@@ -72,6 +72,9 @@ class PaymentSenseTest extends GatewayTestCase
 
     }
 
+    /**
+     *
+     */
     public function testPurchase()
     {
         $response = $this->gateway->purchase(

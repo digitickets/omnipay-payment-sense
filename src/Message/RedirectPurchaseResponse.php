@@ -1,4 +1,5 @@
 <?php
+
 namespace Omnipay\PaymentSense\Message;
 
 class RedirectPurchaseResponse extends AbstractPurchaseResponse
@@ -9,7 +10,7 @@ class RedirectPurchaseResponse extends AbstractPurchaseResponse
      * isRedirect
      * @return bool
      */
-    public function isRedirect() : bool
+    public function isRedirect(): bool
     {
         return true;
     }
@@ -18,7 +19,7 @@ class RedirectPurchaseResponse extends AbstractPurchaseResponse
      * getRedirectUrl
      * @return string
      */
-    public function getRedirectUrl() : string
+    public function getRedirectUrl(): string
     {
         return $this->getCheckoutEndpoint();
     }
@@ -27,7 +28,7 @@ class RedirectPurchaseResponse extends AbstractPurchaseResponse
      * getTransactionReference
      * @return string
      */
-    public function getTransactionReference() : string
+    public function getTransactionReference(): string
     {
         return $this->getRequest()->getTransactionId();
     }
@@ -36,7 +37,7 @@ class RedirectPurchaseResponse extends AbstractPurchaseResponse
      * getRedirectMethod
      * @return string
      */
-    public function getRedirectMethod() : string
+    public function getRedirectMethod(): string
     {
         return 'POST';
     }
@@ -45,7 +46,7 @@ class RedirectPurchaseResponse extends AbstractPurchaseResponse
      * getRedirectData
      * @return array
      */
-    public function getRedirectData() : array
+    public function getRedirectData(): array
     {
         return $this->getRequest()->getData();
     }
@@ -54,7 +55,7 @@ class RedirectPurchaseResponse extends AbstractPurchaseResponse
      * getCheckoutEndpoint
      * @return string
      */
-    protected function getCheckoutEndpoint() : string
+    protected function getCheckoutEndpoint(): string
     {
         return $this->checkoutEndpoint;
     }

@@ -14,41 +14,41 @@ use Omnipay\Common\Message\ResponseInterface;
 
 class RedirectPurchaseRequest extends AbstractPurchaseRequest
 {
-    public const AMOUNT = 'Amount';
-    public const CURRENCY_CODE = 'CurrencyCode';
-    public const ORDER_ID = 'OrderID';
-    public const TRANSACTION_TYPE = 'TransactionType';
-    public const TRANSACTION_DATE_TIME = 'TransactionDateTime';
-    public const CALLBACK_URL = 'CallbackURL';
-    public const ORDER_DESCRIPTION = 'OrderDescription';
-    public const CUSTOMER_NAME = 'CustomerName';
-    public const EMAIL_ADDRESS = 'EmailAddress';
-    public const ADDRESS1 = 'Address1';
-    public const ADDRESS2 = 'Address2';
-    public const ADDRESS3 = 'Address3';
-    public const ADDRESS4 = 'Address4';
-    public const CITY = 'City';
-    public const STATE = 'State';
-    public const POST_CODE = 'PostCode';
-    public const COUNTRY_CODE = 'CountryCode';
-    public const CV2_MANDATORY = 'CV2Mandatory';
-    public const ADDRESS1_MANDATORY = 'Address1Mandatory';
-    public const CITY_MANDATORY = 'CityMandatory';
-    public const POST_CODE_MANDATORY = 'PostCodeMandatory';
-    public const STATE_MANDATORY = 'StateMandatory';
-    public const COUNTRY_MANDATORY = 'CountryMandatory';
-    public const RESULT_DELIVERY_METHOD = 'ResultDeliveryMethod';
-    public const SERVER_RESULT_URL = 'ServerResultURL';
-    public const PAYMENT_FORM_DISPLAYS_RESULT = 'PaymentFormDisplaysResult';
-    public const SERVER_RESULT_URL_COOKIE_VARIABLES = 'ServerResultURLCookieVariables';
-    public const SERVER_RESULT_URL_FORM_VARIABLES = 'ServerResultURLFormVariables';
-    public const SERVER_RESULT_URL_QUERY_STRING_VARIABLES = 'ServerResultURLQueryStringVariables';
-    public const ECHO_CARD_TYPE = 'EchoCardType';
-    public const EMAIL_ADDRESS_EDITABLE = 'EmailAddressEditable';
-    public const PHONE_NUMBER_EDITABLE = 'PhoneNumberEditable';
-    public const PHONE_NUMBER = 'PhoneNumber';
+    const AMOUNT = 'Amount';
+    const CURRENCY_CODE = 'CurrencyCode';
+    const ORDER_ID = 'OrderID';
+    const TRANSACTION_TYPE = 'TransactionType';
+    const TRANSACTION_DATE_TIME = 'TransactionDateTime';
+    const CALLBACK_URL = 'CallbackURL';
+    const ORDER_DESCRIPTION = 'OrderDescription';
+    const CUSTOMER_NAME = 'CustomerName';
+    const EMAIL_ADDRESS = 'EmailAddress';
+    const ADDRESS1 = 'Address1';
+    const ADDRESS2 = 'Address2';
+    const ADDRESS3 = 'Address3';
+    const ADDRESS4 = 'Address4';
+    const CITY = 'City';
+    const STATE = 'State';
+    const POST_CODE = 'PostCode';
+    const COUNTRY_CODE = 'CountryCode';
+    const CV2_MANDATORY = 'CV2Mandatory';
+    const ADDRESS1_MANDATORY = 'Address1Mandatory';
+    const CITY_MANDATORY = 'CityMandatory';
+    const POST_CODE_MANDATORY = 'PostCodeMandatory';
+    const STATE_MANDATORY = 'StateMandatory';
+    const COUNTRY_MANDATORY = 'CountryMandatory';
+    const RESULT_DELIVERY_METHOD = 'ResultDeliveryMethod';
+    const SERVER_RESULT_URL = 'ServerResultURL';
+    const PAYMENT_FORM_DISPLAYS_RESULT = 'PaymentFormDisplaysResult';
+    const SERVER_RESULT_URL_COOKIE_VARIABLES = 'ServerResultURLCookieVariables';
+    const SERVER_RESULT_URL_FORM_VARIABLES = 'ServerResultURLFormVariables';
+    const SERVER_RESULT_URL_QUERY_STRING_VARIABLES = 'ServerResultURLQueryStringVariables';
+    const ECHO_CARD_TYPE = 'EchoCardType';
+    const EMAIL_ADDRESS_EDITABLE = 'EmailAddressEditable';
+    const PHONE_NUMBER_EDITABLE = 'PhoneNumberEditable';
+    const PHONE_NUMBER = 'PhoneNumber';
 
-    public const HASH_DIGEST = 'HashDigest';
+    const HASH_DIGEST = 'HashDigest';
 
     /**
      * Returns the data on the request.
@@ -168,7 +168,7 @@ class RedirectPurchaseRequest extends AbstractPurchaseRequest
      *
      * @throws InvalidRequestException
      */
-    public function validate(): void
+    public function validate()
     {
         $this->httpRequest->request;
         foreach (func_get_args() as $key) {

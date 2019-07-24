@@ -19,9 +19,9 @@ use Omnipay\PaymentSense\Message\RedirectPurchaseRequest;
  */
 class Gateway extends AbstractGateway
 {
-    public const MERCHANT_ID = 'MerchantID';
-    public const PRE_SHARED_KEY = 'PreSharedKey';
-    public const PASSWORD = 'Password';
+    const MERCHANT_ID = 'MerchantID';
+    const PRE_SHARED_KEY = 'PreSharedKey';
+    const PASSWORD = 'Password';
     
     /**
      * Get gateway name
@@ -33,31 +33,55 @@ class Gateway extends AbstractGateway
         return 'SecureTrading';
     }
 
+    /**
+     * @param $value
+     *
+     * @return $this
+     */
     public function setMerchantId($value)
     {
         return $this->setParameter('merchantId', $value);
     }
 
+    /**
+     * @return mixed
+     */
     public function getMerchantId()
     {
         return $this->getParameter('merchantId');
     }
 
+    /**
+     * @param $value
+     *
+     * @return $this
+     */
     public function setPassword($value)
     {
         return $this->setParameter('password', $value);
     }
 
+    /**
+     * @return mixed
+     */
     public function getPassword()
     {
         return $this->getParameter('password');
     }
 
+    /**
+     * @param $value
+     *
+     * @return $this
+     */
     public function setPreSharedKey($value)
     {
         return $this->setParameter('preSharedKey', $value);
     }
 
+    /**
+     * @return mixed
+     */
     public function getPreSharedKey()
     {
         return $this->getParameter('preSharedKey');

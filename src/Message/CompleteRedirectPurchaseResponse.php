@@ -1,15 +1,16 @@
 <?php
+
 namespace Omnipay\PaymentSense\Message;
 
 use Omnipay\Common\Message\RequestInterface;
 
 class CompleteRedirectPurchaseResponse extends AbstractPurchaseResponse
 {
-    public const STATUS_CODE = 'StatusCode';
-    public const MESSAGE = 'Message';
-    public const CROSS_REFERENCE = 'CrossReference';
+    const STATUS_CODE = 'StatusCode';
+    const MESSAGE = 'Message';
+    const CROSS_REFERENCE = 'CrossReference';
 
-    public const RESULT_SUCCESS = '0';
+    const RESULT_SUCCESS = '0';
 
     /**
      * @param RequestInterface $request
@@ -26,7 +27,7 @@ class CompleteRedirectPurchaseResponse extends AbstractPurchaseResponse
      *
      * @return bool
      */
-    public function isRedirect() : bool
+    public function isRedirect(): bool
     {
         return false;
     }
@@ -36,7 +37,7 @@ class CompleteRedirectPurchaseResponse extends AbstractPurchaseResponse
      *
      * @return bool
      */
-    public function isSuccessful() : bool
+    public function isSuccessful(): bool
     {
         return isset($this->data[static::STATUS_CODE])
             && static::RESULT_SUCCESS === $this->data[static::STATUS_CODE];
@@ -57,7 +58,7 @@ class CompleteRedirectPurchaseResponse extends AbstractPurchaseResponse
     public function getTransactionReference()
     {
         return isset($this->data[static::CROSS_REFERENCE]) ?
-        $this->data[static::CROSS_REFERENCE] : null;
+            $this->data[static::CROSS_REFERENCE] : null;
     }
 
     /**

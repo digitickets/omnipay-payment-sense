@@ -3,11 +3,7 @@
 namespace Omnipay\PaymentSense\Test\Message;
 
 use Omnipay\Common\Message\RequestInterface;
-use Omnipay\PaymentSense\Gateway;
-
 use Omnipay\PaymentSense\Message\CompleteRedirectPurchaseRequest;
-use Omnipay\PaymentSense\Message\CompleteRedirectPurchaseResponse;
-
 use Omnipay\Tests\TestCase;
 use ReflectionObject;
 use Symfony\Component\HttpFoundation\Request;

@@ -8,53 +8,53 @@ use Omnipay\PaymentSense\Helper;
 
 class CompleteRedirectPurchaseRequest extends AbstractPurchaseRequest
 {
-    public const HASH_DIGEST = 'HashDigest';
+    const HASH_DIGEST = 'HashDigest';
 
-    public const MERCHANT_ID = 'MerchantID';
-    public const STATUS_CODE = 'StatusCode';
-    public const MESSAGE = 'Message';
-    public const PREVIOUS_STATUS_CODE = 'PreviousStatusCode';
-    public const PREVIOUS_MESSAGE = 'PreviousMessage';
-    public const CROSS_REFERENCE = 'CrossReference';
-    public const ADDRESS_NUMERIC_CHECK_RESULT = 'AddressNumericCheckResult';
-    public const POST_CODE_CHECK_RESULT = 'PostCodeCheckResult';
-    public const CV2_CHECK_RESULT = 'CV2CheckResult';
-    public const THREE_D_SECURE_AUTHENTICATION_CHECK_RESULT = 'ThreeDSecureAuthenticationCheckResult';
+    const MERCHANT_ID = 'MerchantID';
+    const STATUS_CODE = 'StatusCode';
+    const MESSAGE = 'Message';
+    const PREVIOUS_STATUS_CODE = 'PreviousStatusCode';
+    const PREVIOUS_MESSAGE = 'PreviousMessage';
+    const CROSS_REFERENCE = 'CrossReference';
+    const ADDRESS_NUMERIC_CHECK_RESULT = 'AddressNumericCheckResult';
+    const POST_CODE_CHECK_RESULT = 'PostCodeCheckResult';
+    const CV2_CHECK_RESULT = 'CV2CheckResult';
+    const THREE_D_SECURE_AUTHENTICATION_CHECK_RESULT = 'ThreeDSecureAuthenticationCheckResult';
 
-    public const CARD_TYPE = 'CardType';
-    public const CARD_CLASS = 'CardClass';
-    public const CARD_ISSUER = 'CardIssuer';
-    public const CARD_ISSUER_COUNTRY_CODE = 'CardIssuerCountryCode';
-    public const CARD_NUMBER_FIRST_SIX = 'CardNumberFirstSix';
-    public const CARD_NUMBER_LAST_FOUR = 'CardNumberLastFour';
-    public const CARD_EXPIRY_DATE = 'CardExpiryDate';
+    const CARD_TYPE = 'CardType';
+    const CARD_CLASS = 'CardClass';
+    const CARD_ISSUER = 'CardIssuer';
+    const CARD_ISSUER_COUNTRY_CODE = 'CardIssuerCountryCode';
+    const CARD_NUMBER_FIRST_SIX = 'CardNumberFirstSix';
+    const CARD_NUMBER_LAST_FOUR = 'CardNumberLastFour';
+    const CARD_EXPIRY_DATE = 'CardExpiryDate';
 
-    public const AMOUNT = 'Amount';
-    public const DONATION_AMOUNT = 'DonationAmount';
+    const AMOUNT = 'Amount';
+    const DONATION_AMOUNT = 'DonationAmount';
 
-    public const CURRENCY_CODE = 'CurrencyCode';
-    public const ORDER_ID = 'OrderID';
-    public const TRANSACTION_TYPE = 'TransactionType';
-    public const TRANSACTION_DATE_TIME = 'TransactionDateTime';
-    public const ORDER_DESCRIPTION = 'OrderDescription';
-    public const CUSTOMER_NAME = 'CustomerName';
+    const CURRENCY_CODE = 'CurrencyCode';
+    const ORDER_ID = 'OrderID';
+    const TRANSACTION_TYPE = 'TransactionType';
+    const TRANSACTION_DATE_TIME = 'TransactionDateTime';
+    const ORDER_DESCRIPTION = 'OrderDescription';
+    const CUSTOMER_NAME = 'CustomerName';
 
-    public const ADDRESS1 = 'Address1';
-    public const ADDRESS2 = 'Address2';
-    public const ADDRESS3 = 'Address3';
-    public const ADDRESS4 = 'Address4';
-    public const CITY = 'City';
-    public const STATE = 'State';
-    public const POST_CODE = 'PostCode';
-    public const COUNTRY_CODE = 'CountryCode';
-    public const EMAIL_ADDRESS = 'EmailAddress';
+    const ADDRESS1 = 'Address1';
+    const ADDRESS2 = 'Address2';
+    const ADDRESS3 = 'Address3';
+    const ADDRESS4 = 'Address4';
+    const CITY = 'City';
+    const STATE = 'State';
+    const POST_CODE = 'PostCode';
+    const COUNTRY_CODE = 'CountryCode';
+    const EMAIL_ADDRESS = 'EmailAddress';
 
-    public const PHONE_NUMBER = 'PhoneNumber';
-    public const DATE_OF_BIRTH = 'DateOfBirth';
-    public const PRIMARY_ACCOUNT_NAME = 'PrimaryAccountName';
-    public const PRIMARY_ACCOUNT_NUMBER = 'PrimaryAccountNumber';
-    public const PRIMARY_ACCOUNT_DATE_OF_BIRTH = 'PrimaryAccountDateOfBirth';
-    public const PRIMARY_ACCOUNT_POST_CODE = 'PrimaryAccountPostCode';
+    const PHONE_NUMBER = 'PhoneNumber';
+    const DATE_OF_BIRTH = 'DateOfBirth';
+    const PRIMARY_ACCOUNT_NAME = 'PrimaryAccountName';
+    const PRIMARY_ACCOUNT_NUMBER = 'PrimaryAccountNumber';
+    const PRIMARY_ACCOUNT_DATE_OF_BIRTH = 'PrimaryAccountDateOfBirth';
+    const PRIMARY_ACCOUNT_POST_CODE = 'PrimaryAccountPostCode';
 
     /**
      * This method will verify if the received information from the provider

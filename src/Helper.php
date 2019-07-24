@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabo
- * Date: 22/07/2019
- * Time: 13:20
- */
 
 namespace Omnipay\PaymentSense;
 
@@ -75,7 +69,7 @@ class Helper
 
         $header[Gateway::MERCHANT_ID] = $merchantId;
         $header[Gateway::PASSWORD] = $password;
-        
+
         return self::arrayToQueryString($header + $data);
     }
 

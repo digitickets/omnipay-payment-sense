@@ -1,4 +1,5 @@
 <?php
+
 namespace Omnipay\PaymentSense\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
@@ -14,7 +15,7 @@ abstract class AbstractPurchaseResponse extends AbstractResponse implements
      *
      * @return bool
      */
-    public function isSuccessful() : bool
+    public function isSuccessful(): bool
     {
         return false;
     }

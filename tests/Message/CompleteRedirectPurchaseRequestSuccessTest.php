@@ -2,13 +2,12 @@
 
 namespace Omnipay\PaymentSense\Test\Message;
 
-use Omnipay\Common\Message\RequestInterface;
 
 use Omnipay\PaymentSense\Message\CompleteRedirectPurchaseRequest;
 use Omnipay\PaymentSense\Message\CompleteRedirectPurchaseResponse;
-
+use function Omnipay\PaymentSense\Test\Gateway\getMockHttpRequest;
 use Omnipay\Tests\TestCase;
-use ReflectionObject;
+use function parse_str;
 use Symfony\Component\HttpFoundation\Request;
 
 class CompleteRedirectPurchaseRequestSuccessTest extends TestCase
@@ -57,34 +56,10 @@ class CompleteRedirectPurchaseRequestSuccessTest extends TestCase
      */
     public function getHttpRequest()
     {
-        $requestMock = $this->getMockHttpRequest('CompletePurchaseSuccess.txt');
-        parse_str($requestMock->getBody()->getContents(), $data);
+        $data = getMockHttpRequest('CompletePurchaseSuccess.txt');
+        parse_str($data['body'], $body);
 
-        return new Request([], $data, [], [], [], [],
-            $requestMock->getBody()->getContents());
-    }
-
-    /**
-     * Get a mock response for a client by mock file name
-     *
-     * @param string $path Relative path to the mock response file
-     *
-     * @return ResponseInterface
-     */
-    public function getMockHttpRequest($path)
-    {
-        if ($path instanceof RequestInterface) {
-            return $path;
-        }
-
-        $ref = new ReflectionObject($this);
-        $dir = dirname($ref->getFileName());
-
-        // if mock file doesn't exist, check parent directory
-        if (!file_exists($dir . '/Mock/' . $path) && file_exists($dir . '/../Mock/' . $path)) {
-            return \GuzzleHttp\Psr7\parse_request(file_get_contents($dir . '/../Mock/' . $path));
-        }
-
-        return \GuzzleHttp\Psr7\parse_request(file_get_contents($dir . '/Mock/' . $path));
+        return new Request([], $body, [], [], [], [],
+            $data['body']);
     }
 }

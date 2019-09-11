@@ -41,6 +41,11 @@ This is a sample code of standard Off-site controller using the driver.
 // Gateway setup
 $gateway = $this->gatewayFactory('PaymentSense');
 
+// Pluigns specific parameters
+gateway->setMerchantId('00000001');
+$gateway->setPassword('#asPdasd_asd');
+$gateway->setPreSharedKey('asdqweasdzxc');
+
 // Create or fetch your product transaction
 $transaction = $this->createTransaction($request);
 
@@ -78,6 +83,11 @@ $transaction = Transaction::findOrFail($transactionId);
 
 // Gateway setup
 $gateway = $this->gatewayFactory('PaymentSense');
+
+// Pluigns specific parameters
+gateway->setMerchantId('00000001');
+$gateway->setPassword('#asPdasd_asd');
+$gateway->setPreSharedKey('asdqweasdzxc');
 
 // Get the data ready to complete the payment. Since this is typically a stateless callback
 // we need to first retrieve our original product transaction details

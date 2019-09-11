@@ -3,72 +3,11 @@
 namespace Omnipay\PaymentSense\Message;
 
 use Omnipay\Common\Message\AbstractRequest;
+use Omnipay\PaymentSense\Traits\GatewayParamsTrait;
 
 abstract class AbstractPurchaseRequest extends AbstractRequest
 {
-    /**
-     * getMerchantId
-     * @return string
-     */
-    public function getMerchantId(): string
-    {
-        return $this->getParameter('merchantId');
-    }
-
-    /**
-     * setMerchantId
-     *
-     * @param [type] $value
-     *
-     * @return \Omnipay\Common\Message\AbstractRequest
-     */
-    public function setMerchantId($value)
-    {
-        return $this->setParameter('merchantId', $value);
-    }
-
-    /**
-     * getPreSharedKey
-     * @return string
-     */
-    public function getPreSharedKey(): string
-    {
-        return $this->getParameter('sharedSecret');
-    }
-
-    /**
-     * setPreSharedKey
-     *
-     * @param [type] $value
-     *
-     * @return \Omnipay\Common\Message\AbstractRequest
-     */
-    public function setPreSharedKey($value)
-    {
-        return $this->setParameter('sharedSecret', $value);
-    }
-
-    /**
-     * setPassword
-     *
-     * @param $value
-     *
-     * @return \Omnipay\Common\Message\AbstractRequest
-     */
-    public function setPassword($value)
-    {
-        return $this->setParameter('password', $value);
-    }
-
-    /**
-     * getPassword
-     *
-     * @return \Omnipay\Common\Message\AbstractRequest
-     */
-    public function getPassword()
-    {
-        return $this->getParameter('password');
-    }
+    use GatewayParamsTrait;
 
     /**
      * @param $value

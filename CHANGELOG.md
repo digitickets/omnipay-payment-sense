@@ -10,4 +10,7 @@
 
   - Removes Guzzle for tests
   
+## 0.1.3
+  
+  - Uses traits for gateway parameters
   
